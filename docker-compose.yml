@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+  db:
+    container_name: db
+    env_file: .env
+    image: postgres:12.1-alpine
+    restart: always
+    volumes:
+      - ./db/pgdata:/var/lib/postgresql/data
+    ports:
+      - 5433:5432
+  migrations:
+    container_name: migrations
+    env_file: .env
+    depends_on:
+      - db
+    build: ./migrations
+    restart: on-failure
+    environment:
+      DB_PORT: 5432
+      DB_HOST: db

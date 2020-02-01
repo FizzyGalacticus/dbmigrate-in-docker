@@ -1,0 +1,20 @@
+{
+  "name": "dbmigrate",
+  "version": "1.0.0",
+  "description": "dbmigrate in docker!",
+  "main": "index.js",
+  "repository": "https://github.com/FizzyGalacticus/dbmigrate-in-docker",
+  "author": "Dustin L. Dodson",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dbup": "db-migrate --config config.js up",
+    "dbdown": "db-migrate --config config.js down",
+    "dbcreate": "node bin/createMigration.js"
+  },
+  "dependencies": {
+    "@fizzygalacticus/colored-fancy-log": "^1.0.0",
+    "db-migrate": "^0.11.6",
+    "db-migrate-pg": "^1.0.0"
+  }
+}

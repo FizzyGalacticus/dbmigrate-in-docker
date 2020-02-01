@@ -1,0 +1,15 @@
+{
+  "name": "dbmigrate-in-docker",
+  "version": "1.0.0",
+  "description": "Run Postgres in docker with db-migrate migrations",
+  "main": "index.js",
+  "repository": "https://github.com/FizzyGalacticus/dbmigrate-in-docker",
+  "author": "Dustin L. Dodson <dustinleedodson@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "docker-compose build",
+    "up": "docker-compose up",
+    "down": "docker-compose down",
+    "start": "npm run build && npm run up"
+  }
+}

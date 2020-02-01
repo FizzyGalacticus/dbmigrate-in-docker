@@ -1,0 +1,5 @@
+# pgdata
+db/pgdata
+
+# migrations
+migrations/node_modules
